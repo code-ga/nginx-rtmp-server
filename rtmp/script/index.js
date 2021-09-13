@@ -38,7 +38,7 @@ var getVideo = (
     $(DivClassId).append(video)
     return videoSrc
 }
-$(".formData").submit((e) => {
+$(".formData").submit((event) => {
     event.preventDefault()
     const roomId = $("#roomId").value
     var videoSrc = getVideo(".videoDiv", roomId)
