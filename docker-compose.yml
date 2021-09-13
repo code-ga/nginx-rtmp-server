@@ -11,8 +11,4 @@ services:
 
   auth:
     build: ./auth
-<<<<<<< HEAD
     container_name: auth_server
-=======
-    container_name: auth_server
->>>>>>> 87fa5eee64761b7e39026a5a6ddbb7a7fd5ea85f
