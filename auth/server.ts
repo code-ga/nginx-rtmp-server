@@ -1,13 +1,15 @@
-const express = require('express');
+import express from "express";
+import bodyParser from "body-parser";
+import cors from "cors";
 const app = express();
 
 app.use(express.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cors());
 
-app.get("/", (req,res) => {
-  res.send("server is running")
-})
-
-app.post("/auth", function (req, res) {
+app.post("/auth", (req:express.Request, res:express.Response) => {
+  console.log(req.body);
   /* This server is only available to nginx */
   const streamkey = req.body.key;
 

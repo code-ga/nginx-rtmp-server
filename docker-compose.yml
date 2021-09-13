@@ -11,4 +11,6 @@ services:
 
   auth:
     build: ./auth
+    ports: 
+      -"8000:8000"
     container_name: auth_server
