@@ -1,6 +1,6 @@
 version: "3.3"
 services:
-  rtmp:
+  web:
     build: ./rtmp
     ports:
       - "1935:1935"
